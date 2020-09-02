@@ -4,6 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a href="/" class="navbar-brand">Productos app</a>
+    </nav>
+    <div class="container">
+      <!--APLICACION-->
+      <div id="App" class="row pt-5">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h2>Agregue un producto</h2>
+            </div>
+            <form id="product-form" class="card-body">
+              <div class="form-group">
+                <input type="text" placeholder="Nombre del Producto" id="name" class="form-control" />
+              </div>
+              <div class="form-group">
+                <input type="number" id="price" step="0.01" placeholder="Precio del Producto" class="form-control" />
+              </div>
+              <div class="form-group">
+                <input type="number" id="year" min="1900" max="2100" placeholder="Año de registro del Producto" class=" form-control">
+              </div>
+              <div class="form-group"> 
+                <input type="submit" value="Save" class=" btn btn-primary btn-block">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div id="product-list" class=" col-md-8"></div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+
+    <!--JQUERY POOPPER-->
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    
+  </body>
 </html>
